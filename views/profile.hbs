@@ -1,0 +1,75 @@
+<div class="container-fluid">
+    <div class="col-md-2 col-lg-2 col-sm-12">
+        {{>navigation}}
+    </div>
+    <div class="col-md-10 col-lg-10 col-sm-12">
+        <div class="col-md-12 col-lg-12 col-sm-12">
+
+            <ol class="breadcrumb">
+                <li><a href="#">Profielen</a></li>
+                <li class="active"> {{profile.firstname}} {{profile.lastname}} </li>
+
+            </ol>
+        </div>
+        <div class="col-md-8 col-lg-8 col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{profile.firstname}} {{ profile.lastname}}
+                </div>
+                <div class="panel-body">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Agenda
+                </div>
+                <div class="panel-body">
+                    <p>De applicatie controlleerd op de volgende tijden op beweging/afwezigheid</p>
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Datum/tijd</th>
+                            <th>Check op</th>
+                            <th></th>
+
+                        </tr>
+                        <tr>
+                            <td>Iedere maandag van 9:00 tot 9:30</td>
+                            <td>Activiteit/beweging</td>
+                            <td class="btn-group">
+                                <button href="#" class="btn btn-sm btn-info">Wijzig</button>
+                                <button href="#" class="btn btn-sm btn-danger">Verwijder</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Maandag 22 mei 2016 van 9:00 tot 9:30</td>
+                            <td>Afwezigheid</td>
+                            <td class="btn-group">
+                                <button href="#" class="btn btn-sm btn-info">Wijzig</button>
+                                <button href="#" class="btn btn-sm btn-danger">Verwijder</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#myModal">Nieuw agenda-item</button>
+
+                    {{> agenda-item-modal }}
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-12 col-lg-12 col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Geschiedenis
+                </div>
+                <div class="panel-body">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
